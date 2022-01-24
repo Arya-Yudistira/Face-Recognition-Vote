@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Login from "./Login.js";
+import Register from "./Register.js";
+import Vote  from "./Vote.js";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component{
+  render(){
+    return(
+      <Router>
+        <div className="App">
+          <nav className="navbar navbar-expand-lg navbar-light bg-primary">
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item">
+                  <a className="nav-link text-light" href="http://localhost:3000/">Login</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link text-light" href="http://localhost:3000/Register">Register</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+          <Routes>
+            <Route path="/" element={<Login/>}/>
+            <Route path="/Register" element={<Register/>}/>
+            <Route path="/Vote" element={<Vote/>}/>
+          </Routes>
+        </Router>
+    )
+  }  
 }
 
-export default App;
