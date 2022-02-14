@@ -45,11 +45,9 @@ export default class Login extends Component{
                 :
                 <>
                     <div className="details text-center">
-                        NIK:{this.state.nik}
-                        <br />
-                        Nama: {this.state.name}
-                        <br />
-                        Anda Berhasil Login Silahkan Menenkan Tombol Dibawah Untuk Melanjutkan
+                        <p>NIK:{this.state.nik}</p>
+                        <p>Nama: {this.state.name}</p>
+                        <p>Anda Berhasil Login Silahkan Menenkan Tombol Dibawah Untuk Melanjutkan</p>
                         <div className="form-group">
                             <br />
                             <a href='http://localhost:3000/Vote'><button className='btn btn-primary' onClick={()=>{this.setState({show:false})}}>Continue</button></a>

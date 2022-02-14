@@ -13,10 +13,10 @@ export default class App extends Component{
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
-                  <a className="nav-link text-light" href="http://localhost:3000/">Login</a>
+                  <a className="nav-link font-weight-bold text-light" href="http://localhost:3000/">Login</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-light" href="http://localhost:3000/Register">Register</a>
+                  <a className="nav-link font-weight-bold text-light" href="http://localhost:3000/Register">Register</a>
                 </li>
               </ul>
             </div>
