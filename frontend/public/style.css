@@ -21,6 +21,8 @@ h3 {
   border: 1px solid black;
   border-radius: 3px;
   text-align: justify;
+  max-width: fit-content;
+  margin: auto;
 }
 
 .logo {
