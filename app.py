@@ -110,6 +110,17 @@ def pilih():
     con.close()
     return "voted"
 
+@app.route('/pilih2')
+def pilih2():
+    con = conn.connect(host='localhost', database='skripsi',user='root', charset='utf8', port=3306)
+    cursor = con.cursor()
+    sql ='UPDATE suara SET suara = suara + 1 WHERE id = 2 '
+    cursor.execute(sql)
+    con.commit()
+    cursor.close()
+    con.close()
+    return "voted"
+
 def gen(camera):
     while True:
         frame = camera.get_frame()

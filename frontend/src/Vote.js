@@ -4,6 +4,9 @@ export default class Vote extends Component{
     pilih(){
         fetch('http://127.0.0.1:5000/pilih')
     }
+    pilih2(){
+        fetch('http://127.0.0.1:5000/pilih2')
+    }
     render(){
         return(
             <>
@@ -25,7 +28,7 @@ export default class Vote extends Component{
                             <a href='http://localhost:3000/'><input type="submit" value="Pilih" onClick={()=>{this.pilih()}} className="btn btn-primary" /></a>
                         </div>
                         <div class="col text-center px-md-6">
-                            <a href='http://localhost:3000/'><input type="submit" value="Pilih" onClick={()=>{this.pilih()}} className="btn btn-primary" /></a>
+                            <a href='http://localhost:3000/'><input type="submit" value="Pilih" onClick={()=>{this.pilih2()}} className="btn btn-primary" /></a>
                         </div>
                     </div>
                 </div>
